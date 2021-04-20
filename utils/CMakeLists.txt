@@ -1,11 +1,11 @@
-add_executable(test "./test.c")
+add_executable(test ${CMAKE_CURRENT_SOURCE_DIR}/test.c)
 
 target_include_directories( test
-    PRIVATE "./include"
+    PRIVATE ${CMAKE_SOURCE_DIR}/include
 )
 
 target_link_directories( test
-    PRIVATE "./output/lib"
+    PRIVATE ${LIBRARY_OUTPUT_DIRECTORY}
 )
 
 target_link_libraries( test PRIVATE hello)

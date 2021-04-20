@@ -1,4 +1,4 @@
 rm -rf build/* &&
 cd build  &&
 cmake .. &&
-make
+make VERBOSE=1
